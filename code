@@ -1,0 +1,38 @@
+user_pick1 = input("Player 1 : please choose a weapon: Rock, Paper, or Scissors: ")
+
+user_pick2 = input("Player 2 : please choose a weapon: Rock, Paper, or Scissors: ")
+
+def game(user_pick1,user_pick2):
+
+  if user_pick1 == user_pick2:
+    return("Tie Game Fellers")
+  elif (user_pick1 == "scissors") and (user_pick2 == "paper"):
+    return("%s wins!, scissors beats paper! " % user_pick1)
+  elif (user_pick1 == "scissors") and (user_pick2 == "rock"):
+    return('%s Wins! rock beats scissors'% user_pick2)  
+  elif (user_pick1 == "paper") and (user_pick2 == "rock"):
+    return("%s Wins! Paper beats rock!" % user_pick1)
+  elif (user_pick1 == "paper") and (user_pick2 == "scissors"):
+    return("%s Win! scissors cut that paper up" % user_pick2)
+  elif (user_pick1 == "rock") and (user_pick2 =="scissors"):
+    return("%s Wins! Rock beats them scissors" % user_pick1)
+  elif (user_pick1 == "rock") and (user_pick2 == "paper"):
+    return("%s Wins!Paper smothers rock" % user_pick2)   
+  else: 
+    return("Game over")
+
+run = game(user_pick1,user_pick2)
+
+print(run)
+
+again = input("Would you like to play again?? Yes or No ")
+
+while again == 'yes':
+  user_pick1 = input("Player 1 : please choose a weapon: Rock, Paper, or Scissors: ")
+
+  user_pick2 = input("Player 2 : please choose a weapon: Rock, Paper, or Scissors: ")
+  run = game(user_pick1,user_pick2)
+  print(run)
+  again = input("Would you like to play again?? Yes or No ")
+
+print("thank you come again")  
